@@ -24,18 +24,48 @@ class Dosen extends CI_controller {
 
 	public function save()
 	{
-		$kode=$this->input->post('kode_jurusan');
-		$nama=$this->input->post('nama_jurusan');
-
 		$data=array(
-			'kode_jurusan'=>$kode,
-			'nama_jurusan'=>$nama
+		'nik'=>$this->input->post('nik'),
+		'kode'=>$this->input->post('kode_dosen'),
+		'nama'=>$this->input->post('nama_dosen'),
+		'jk'=>$this->input->post('jk'),
+		'email'=>$this->input->post('email'),
+		'status'=>$this->input->post('status')
 		);
 
-		$this->M_jurusan->save($data);
-		redirect('jurusan','refresh');
+		$this->M_Dosen->save($data);
+		redirect('dosen','refresh');
+	}
+
+	public function update()
+	{
+		$nik=$this->input->post('nik');
+		$data=array(
+		'nik'=>$this->input->post('nik'),
+		'kode'=>$this->input->post('kode_dosen'),
+		'nama'=>$this->input->post('nama_dosen'),
+		'jk'=>$this->input->post('jk'),
+		'email'=>$this->input->post('email'),
+		'status'=>$this->input->post('status')
+		);
+
+		$this->M_Dosen->save($data,$nik);
+		redirect('dosen','refresh');
+	}
+
+	public function edit()
+	{
+		$nik=$this->uri->segment(3);
+		$data['judul']="Edit Data Dosen";
+		$data['edit']=$this->M_dosen->getnik($nik)->row_array();
+		$this->load->view('dosen/edit', $data, FALSE);
+	}
+
+	public function delete()
+	{
+		$nik=$this->uri->segment(3);
+		$this->db->where('nik', $nik);
+		$this->db->delete('dosen');
+		redirect('dosen','refresh');
 	}
 }
-
-
-kk

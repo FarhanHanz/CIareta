@@ -10,6 +10,18 @@ class M_dosen extends CI_model {
 
 	public function save($data)
 	{
-		$this->db->insert('dosen',$data);
+		 return $this->db->insert('dosen',$data);
+	}
+
+	public function getid($id)
+	{
+		$param=array('nik' => $id);
+		return $this->db->get_where('dosen',$param);
+	}
+
+	public function update($data,$nik)
+	{
+		$this->db->where('nik',$nik);
+		$this->db->update('dosen'$data);
 	}
 }

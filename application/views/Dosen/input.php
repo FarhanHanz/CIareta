@@ -15,7 +15,7 @@
 	</tr>
 	<tr>
 		<td>Jenis Kelamin</td>
-		<td><input type="button" value="Laki-laki" value="Perempuan" name="jk" id="jk"></td>
+		<td><input type="radio" value="Perempuan" name="jk" id="jk"> Perepmuan<input type="radio" value="Laki-laki" name="jk" id="jk"> Laki-laki</td>
 	</tr>
 	<tr>
 		<td>Email</td>
@@ -23,7 +23,7 @@
 	</tr>
 	<tr>
 		<td>Status</td>
-		<td><input type="button" value="Aktif" value="Pasif" name="status" id="status"></td>
+		<td><input type="radio" value="Aktif" name="status" id="status"> Aktif<input type="radio" value="Tidak Aktif" name="status" id="status"> Tidak Aktif</td>
 	</tr>
 	<tr>
 		<td><input type="submit" name="button" id="button" value="Simpan"></td>
