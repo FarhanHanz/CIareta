@@ -36,3 +36,6 @@ class Dosen extends CI_controller {
 		redirect('jurusan','refresh');
 	}
 }
+
+
+kk
