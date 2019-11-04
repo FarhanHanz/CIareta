@@ -5,23 +5,23 @@ class M_calon_mahasiswa extends CI_model {
 
 	public function cmh()
 	{
-		return $this->db->get('mahasiswa');
+		return $this->db->get('calon_mahasiswa');
 	}
 
 	public function save($data)
 	{
-		 return $this->db->insert('mahasiswa',$data);
+		 return $this->db->insert('calon_mahasiswa',$data);
 	}
 
 	public function getid($id)
 	{
 		$param=array('no_pendaftaran' => $no_pendaftaran);
-		return $this->db->get_where('mahasiswa',$param);
+		return $this->db->get_where('calon_mahasiswa',$param);
 	}
 
 	public function update($data,$no_pendaftaran)
 	{
 		$this->db->where('no_pendaftaran',$no_pendaftaran);
-		$this->db->update('mahasiswa',$data);
+		$this->db->update('calon_mahasiswa',$data);
 	}
 }

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Mahasiswa extends CI_controller {
+class Calon_mahasiswa extends CI_controller {
 
 	public function __construct()
 	{
@@ -11,15 +11,15 @@ class Mahasiswa extends CI_controller {
 
 	public function index()
 	{
-		$data['judul']="Tampil Data Calon Mahasiswa";
+		$data['judul']="Tampil Data Calon calon_mahasiswa";
 		$data['tampil']=$this->M_calon_mahasiswa->cmh()->result();	
-		$this->load->view('mahasiswa/tampil', $data, FALSE);
+		$this->load->view('calon_mahasiswa/tampil', $data, FALSE);
 	}
 
 	public function input()
 	{	
 		$data['judul']="Input Calon Mahasiswa Baru";
-		$this->load->view('mahasiswa/input', $data, FALSE);
+		$this->load->view('calon_mahasiswa/input', $data, FALSE);
 	}
 
 	public function save()
@@ -38,7 +38,7 @@ class Mahasiswa extends CI_controller {
 		);
 
 		$this->M_caon_mahasiswa->save($data);
-		redirect('mahasiswa','refresh');
+		redirect('calon_mahasiswa','refresh');
 	}
 
 	public function update()
@@ -58,22 +58,22 @@ class Mahasiswa extends CI_controller {
 		);
 
 		$this->M_calon_mahasiswa->update($data,$no_pendaftaran);
-		redirect('mahasiswa','refresh');
+		redirect('calon_mahasiswa','refresh');
 	}
 
 	public function edit()
 	{
 		$no_pendaftaran=$this->uri->segment(3);
-		$data['judul']="Edit Data Calon Mahasiswa";
+		$data['judul']="Edit Data Calon calon_mahasiswa";
 		$data['edit']=$this->M_calon_mahasiswa->getid($no_pendaftaran)->row_array();
-		$this->load->view('mahasiswa/edit', $data, FALSE);
+		$this->load->view('calon_mahasiswa/edit', $data, FALSE);
 	}
 
 	public function delete()
 	{
 		$no_pendaftaran=$this->uri->segment(3);
 		$this->db->where('no_pendaftaran', $no_pendaftaran);
-		$this->db->delete('mahasiswa');
-		redirect('mahasiswa','refresh');
+		$this->db->delete('calon_mahasiswa');
+		redirect('calon_mahasiswa','refresh');
 	}
 }

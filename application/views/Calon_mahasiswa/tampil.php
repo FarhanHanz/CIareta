@@ -1,4 +1,4 @@
-<?php echo anchor('mahasiswa/input','Tambah Baru'); ?>
+<?php echo anchor('calon_mahasiswa/input','Tambah Baru'); ?>
 <table border="1">
 	<tr>
 		<td>No Pendaftara</td>
@@ -26,8 +26,8 @@
 		<td><?php echo $value->id_agama ?></td>
 		<td><?php echo $value->email ?></td>
 		<td><?php echo $value->kode_jurusan ?></td>
-		<td><?php echo anchor('mahasiswa/delete/'.$value->no_pendaftaran,'Hapus'); ?></td>
-		<td><?php echo anchor('mahasiswa/edit/'.$value->no_pendaftaran,'Edit'); ?></td>
+		<td><?php echo anchor('calon_mahasiswa/delete/'.$value->no_pendaftaran,'Hapus'); ?></td>
+		<td><?php echo anchor('calon_mahasiswa/edit/'.$value->no_pendaftaran,'Edit'); ?></td>
 	</tr>
 	<?php } ?>
 </table>
