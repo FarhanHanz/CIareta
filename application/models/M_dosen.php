@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_dosen extends CI_model {
 
-	public function tampil()
+	public function dsn()
 	{
 		return $this->db->get('dosen');
 	}
@@ -22,6 +22,6 @@ class M_dosen extends CI_model {
 	public function update($data,$nik)
 	{
 		$this->db->where('nik',$nik);
-		$this->db->update('dosen'$data);
+		$this->db->update('dosen',$data);
 	}
 }

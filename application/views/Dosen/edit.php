@@ -3,15 +3,15 @@
 <table width="325" border="1">
 	<tr>
 		<td>NIK</td>
-		<td><input type="text" name="nik" id="nik"></td>
+		<td><input type="text" value="<?php echo $edit['nik']?>" name="nik" id="nik"></td>
 	</tr>
 	<tr>
 		<td>Kode</td>
-		<td><input type="text" name="kode_dosen" id="kode_dosen"></td>
+		<td><input type="text" value="<?php echo $edit['kode_dosen']?>" name="kode_dosen" id="kode_dosen"></td>
 	</tr>
 	<tr>
 		<td>Nama</td>
-		<td><input type="text" name="nama_dosen" id="nama_dosen"></td>
+		<td><input type="text" value="<?php echo $edit['nama_dosen']?>" name="nama_dosen" id="nama_dosen"></td>
 	</tr>
 	<tr>
 		<td>Jenis Kelamin</td>
@@ -19,7 +19,7 @@
 	</tr>
 	<tr>
 		<td>Email</td>
-		<td><input type="text" name="email" id="email"></td>
+		<td><input type="text" value="<?php echo $edit['email']?>" name="email" id="email"></td>
 	</tr>
 	<tr>
 		<td>Status</td>

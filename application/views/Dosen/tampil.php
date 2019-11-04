@@ -18,8 +18,8 @@
 		<td><?php echo $value->jk ?></td>
 		<td><?php echo $value->email ?></td>
 		<td><?php echo $value->status ?></td>
-		<td><?php echo anchor('jurusan/delete/'.$value->kode_jurusan,'Hapus'); ?></td>
-		<td><?php echo anchor('jurusan/edit/'.$value->kode_jurusan,'Edit'); ?></td>
+		<td><?php echo anchor('dosen/delete/'.$value->nik,'Hapus'); ?></td>
+		<td><?php echo anchor('dosen/edit/'.$value->nik,'Edit'); ?></td>
 	</tr>
 	<?php } ?>
 </table>

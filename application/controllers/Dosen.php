@@ -12,7 +12,7 @@ class Dosen extends CI_controller {
 	public function index()
 	{
 		$data['judul']="Tampil Data Dosen";
-		$data['tampil']=$this->M_dosen->tampil()->result();	
+		$data['tampil']=$this->M_dosen->dsn()->result();	
 		$this->load->view('dosen/tampil', $data, FALSE);
 	}
 
@@ -26,14 +26,14 @@ class Dosen extends CI_controller {
 	{
 		$data=array(
 		'nik'=>$this->input->post('nik'),
-		'kode'=>$this->input->post('kode_dosen'),
-		'nama'=>$this->input->post('nama_dosen'),
+		'kode_dosen'=>$this->input->post('kode_dosen'),
+		'nama_dosen'=>$this->input->post('nama_dosen'),
 		'jk'=>$this->input->post('jk'),
 		'email'=>$this->input->post('email'),
 		'status'=>$this->input->post('status')
 		);
 
-		$this->M_Dosen->save($data);
+		$this->M_dosen->save($data);
 		redirect('dosen','refresh');
 	}
 
@@ -42,14 +42,14 @@ class Dosen extends CI_controller {
 		$nik=$this->input->post('nik');
 		$data=array(
 		'nik'=>$this->input->post('nik'),
-		'kode'=>$this->input->post('kode_dosen'),
-		'nama'=>$this->input->post('nama_dosen'),
+		'kode_dosen'=>$this->input->post('kode_dosen'),
+		'nama_dosen'=>$this->input->post('nama_dosen'),
 		'jk'=>$this->input->post('jk'),
 		'email'=>$this->input->post('email'),
 		'status'=>$this->input->post('status')
 		);
 
-		$this->M_Dosen->save($data,$nik);
+		$this->M_Dosen->update($data,$nik);
 		redirect('dosen','refresh');
 	}
 
@@ -57,7 +57,7 @@ class Dosen extends CI_controller {
 	{
 		$nik=$this->uri->segment(3);
 		$data['judul']="Edit Data Dosen";
-		$data['edit']=$this->M_dosen->getnik($nik)->row_array();
+		$data['edit']=$this->M_dosen->getid($nik)->row_array();
 		$this->load->view('dosen/edit', $data, FALSE);
 	}
 
