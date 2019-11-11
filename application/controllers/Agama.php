@@ -12,7 +12,7 @@ class Agama extends CI_controller {
 	public function index()
 	{
 		$data['judul']="Tampil Data Agama";
-		$data['tampil']=$this->M_agama->tampil()->result();	
+		$data['tampil']=$this->M_agama->agm()->result();	
 		$this->load->view('agama/tampil', $data, FALSE);
 	}
 

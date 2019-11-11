@@ -6,6 +6,8 @@ class Calon_mahasiswa extends CI_controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('M_jurusan');
+		$this->load->model('M_agama');
 		$this->load->model('M_calon_mahasiswa');
 	}
 
@@ -19,13 +21,15 @@ class Calon_mahasiswa extends CI_controller {
 	public function input()
 	{	
 		$data['judul']="Input Calon Mahasiswa Baru";
+		$data['jurusan']= $this->M_jurusan->jrs()->result();
+		$data['agama']= $this->M_agama->agm()->result();
 		$this->load->view('calon_mahasiswa/input', $data, FALSE);
 	}
 
 	public function save()
 	{
 		$data=array(
-		'no_pendaftara'=>$this->input->post('no_pendaftaran'),
+		'no_pendaftaran'=>$this->input->post('no_pendaftaran'),
 		'nama'=>$this->input->post('nama'),
 		'tempat_lahir'=>$this->input->post('tempat_lahir'),
 		'tgl_lahir'=>$this->input->post('tgl_lahir'),
@@ -37,7 +41,7 @@ class Calon_mahasiswa extends CI_controller {
 		'kode_jurusan'=>$this->input->post('kode_jurusan')
 		);
 
-		$this->M_caon_mahasiswa->save($data);
+		$this->M_calon_mahasiswa->save($data);
 		redirect('calon_mahasiswa','refresh');
 	}
 
@@ -45,7 +49,7 @@ class Calon_mahasiswa extends CI_controller {
 	{
 		$no_pendaftaran=$this->input->post('no_pendaftaran');
 		$data=array(
-		'no_pendaftara'=>$this->input->post('no_pendaftaran'),
+		'no_pendaftaran'=>$this->input->post('no_pendaftaran'),
 		'nama'=>$this->input->post('nama'),
 		'tempat_lahir'=>$this->input->post('tempat_lahir'),
 		'tgl_lahir'=>$this->input->post('tgl_lahir'),
@@ -66,6 +70,8 @@ class Calon_mahasiswa extends CI_controller {
 		$no_pendaftaran=$this->uri->segment(3);
 		$data['judul']="Edit Data Calon calon_mahasiswa";
 		$data['edit']=$this->M_calon_mahasiswa->getid($no_pendaftaran)->row_array();
+		$data['edit']= $this->M_jurusan->getid($id)->row_array();
+		$data['edit']= $this->M_agama->getid($id)->row_array();
 		$this->load->view('calon_mahasiswa/edit', $data, FALSE);
 	}
 

@@ -13,7 +13,7 @@ class M_calon_mahasiswa extends CI_model {
 		 return $this->db->insert('calon_mahasiswa',$data);
 	}
 
-	public function getid($id)
+	public function getid($no_pendaftaran)
 	{
 		$param=array('no_pendaftaran' => $no_pendaftaran);
 		return $this->db->get_where('calon_mahasiswa',$param);

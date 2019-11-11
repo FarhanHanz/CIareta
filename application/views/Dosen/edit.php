@@ -1,4 +1,4 @@
-<?php echo form_open('dosen/save') ?>
+<?php echo form_open('dosen/update') ?>
 <?php echo $judul ?>
 <table width="325" border="1">
 	<tr>

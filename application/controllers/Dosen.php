@@ -49,7 +49,7 @@ class Dosen extends CI_controller {
 		'status'=>$this->input->post('status')
 		);
 
-		$this->M_Dosen->update($data,$nik);
+		$this->M_dosen->update($data,$nik);
 		redirect('dosen','refresh');
 	}
 

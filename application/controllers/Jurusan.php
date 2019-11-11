@@ -12,7 +12,7 @@ class Jurusan extends CI_controller {
 	public function index()
 	{
 		$data['judul']="Tampil Data Jurusan";
-		$data['tampil']=$this->M_jurusan->tampil()->result();	
+		$data['tampil']=$this->M_jurusan->jrs()->result();	
 		$this->load->view('jurusan/tampil', $data, FALSE);
 	}
 

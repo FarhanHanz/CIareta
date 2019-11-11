@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_agama extends CI_Model {
 
-	public function tampil()
+	public function agm()
 	{
 		return $this->db->get('agama');
 	}

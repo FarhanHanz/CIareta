@@ -12,7 +12,7 @@
 		<td>Email</td>
 		<td>Kode Jurusan</td>
 		<td>Aksi</td>
-		<td colspan="2" style="text-align: center;">Aksi</td>
+
 	</tr>
 	<?php foreach ($tampil as $key => $value) { ?>
 	<tr>
@@ -26,8 +26,7 @@
 		<td><?php echo $value->id_agama ?></td>
 		<td><?php echo $value->email ?></td>
 		<td><?php echo $value->kode_jurusan ?></td>
-		<td><?php echo anchor('calon_mahasiswa/delete/'.$value->no_pendaftaran,'Hapus'); ?></td>
-		<td><?php echo anchor('calon_mahasiswa/edit/'.$value->no_pendaftaran,'Edit'); ?></td>
+		<td><?php echo anchor('calon_mahasiswa/delete/'.$value->no_pendaftaran,'Hapus'); ?> <?php echo anchor('calon_mahasiswa/edit/'.$value->no_pendaftaran,'Edit'); ?></td>
 	</tr>
 	<?php } ?>
 </table>

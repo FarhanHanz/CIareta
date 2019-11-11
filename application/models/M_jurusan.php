@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_jurusan extends CI_Model {
 
-	public function tampil()
+	public function jrs()
 	{
 		return $this->db->get('jurusan');
 	}
