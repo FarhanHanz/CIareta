@@ -70,8 +70,8 @@ class Calon_mahasiswa extends CI_controller {
 		$no_pendaftaran=$this->uri->segment(3);
 		$data['judul']="Edit Data Calon calon_mahasiswa";
 		$data['edit']=$this->M_calon_mahasiswa->getid($no_pendaftaran)->row_array();
-		$data['edit']= $this->M_jurusan->getid($id)->row_array();
-		$data['edit']= $this->M_agama->getid($id)->row_array();
+		$data['jurusan']= $this->M_jurusan->jrs()->result();
+		$data['agama']= $this->M_agama->agm()->result();
 		$this->load->view('calon_mahasiswa/edit', $data, FALSE);
 	}
 

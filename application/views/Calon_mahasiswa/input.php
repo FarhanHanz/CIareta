@@ -31,7 +31,8 @@
 	</tr>
 	<tr>
 		<td>Agama</td>
-		<td><select name="id_agama"><option value="">== Pilih Agama ==</option><?php foreach ($agama as $key => $value) { ?><option value="<?php echo $value->id_agama ?>"><?php echo $value->nama_agama ?></option><?php } ?></select>></td>
+		<td><select name="id_agama">
+			<option value="">== Pilih Agama ==</option><?php foreach ($agama as $key => $value) { ?><option value="<?php echo $value->id_agama ?>"><?php echo $value->nama_agama ?></option><?php } ?></select>></td>
 	</tr>
 	<tr>
 		<td>Email</td>

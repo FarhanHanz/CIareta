@@ -31,7 +31,7 @@
 	</tr>
 	<tr>
 		<td>Agama</td>
-		<td><select value="<?php echo $edit['id_agama']?>" name="id_agama"><option value="">== Pilih Agama ==</option><?php foreach ($agama as $key => $value) { ?><option value="<?php echo $value->id_agama ?>"><?php echo $value->nama_agama ?></option><?php } ?></select>></td>
+		<td><select name="id_agama"><option value="<?php echo $edit['id_agama']?>">== Pilih Agama ==</option><?php foreach ($agama as $key => $value) { ?><option value="<?php echo $value->id_agama ?>"><?php echo $value->nama_agama ?></option><?php } ?></select>></td>
 	</tr>
 	<tr>
 		<td>Email</td>
@@ -39,7 +39,7 @@
 	</tr>
 	<tr>
 		<td>Jurusan</td>
-		<td><select value="<?php echo $edit['kode_jurusan']?>" name="kode_jurusan"><option value="">== Pilih Jurusan ==</option><?php foreach ($jurusan as $key => $value) { ?><option value="<?php echo $value->kode_jurusan ?>"><?php echo $value->nama_jurusan ?></option><?php } ?></select>></td>
+		<td><select name="kode_jurusan"><option value="<?php echo $edit['kode_jurusan']?>">== Pilih Jurusan ==</option><?php foreach ($jurusan as $key => $value) { ?><option value="<?php echo $value->kode_jurusan ?>"><?php echo $value->nama_jurusan ?></option><?php } ?></select>></td>
 	</tr>
 	<tr>
 		<td><input type="submit" name="button" id="button" value="Simpan"></td>
