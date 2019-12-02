@@ -24,7 +24,7 @@
 				<td width="200" height="15" bgcolor="#778899"><a href="http://localhost/Pendaftaran/index.php/calon_mahasiswa" style="color: white"> Calon Mahasiswa</td>
 			</tr>
 			<tr>
-			<td colspan="2" width="1000" height="25" bgcolor="#7FFFD4" align="center">©Copyright<a href="h4nzit.wordpress.com/"> h4nzit.wordpress.com</a></td>
+			<td colspan="2" width="1000" height="25" bgcolor="#7FFFD4" align="center">©Copyright<a href="http://h4nzit.wordpress.com/"> h4nzit.wordpress.com</a></td>
 			</tr>
 	</table>
 
