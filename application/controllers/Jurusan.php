@@ -45,7 +45,9 @@ class Jurusan extends CI_controller {
 		$id=$this->uri->segment(3);
 		$data['judul']="Edit Data";
 		$data['edit']=$this->M_jurusan->getid($id)->row_array();
-		$this->load->view('jurusan/edit', $data, FALSE);
+		$this->load->view('theme/header', $data, FALSE);
+		$this->load->view('jurusan/edit', $data, FALSE);		
+		$this->load->view('theme/footer', $data, FALSE);		
 	}
 
 	public function update()
